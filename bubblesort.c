@@ -1,7 +1,7 @@
 #include <stdio.h>
 int main () 
 {
-int s,i,j,t,a[50],x;
+int s,i,t,a[50],x;
 printf("enter size\n");
 scanf("%d",&s);
 for(i=0;i<s;i++)
@@ -11,14 +11,11 @@ scanf("%d",&a[i]);
 }
 for(i=0;i<s-1;i++)
 {
-for(j=0 ; j<s-1 ; j++)
+if(a[i]>a[i+1])
 {
-if(a[j]>a[j+1])
-{
-t=a[j];
-a[j]=a[j+1];
-a[j+1]=t;
-}
+t=a[i];
+a[i]=a[i+1];
+a[i+1]=t;
 }
 }
 for(i=0;i<s;i++)
